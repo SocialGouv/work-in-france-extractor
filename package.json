@@ -1,0 +1,20 @@
+{
+  "name": "work-in-france-extractor",
+  "version": "1.0.0",
+  "author": "Julien Bouquillon <julien.bouquillon@sg.social.gouv.fr>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revolunet/work-in-france-extractor.git"
+  },
+  "homepage": "https://revolunet.github.io/work-in-france-extractor/",
+  "bugs": {
+    "url": "https://github.com/revolunet/work-in-france-extractor/issues"
+  },
+  "dependencies": {
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "jest-cli": "^23.5.0"
+  }
+}
