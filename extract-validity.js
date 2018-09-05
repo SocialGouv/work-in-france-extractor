@@ -21,12 +21,6 @@ const hasExpired = doc => {
   return endDate && new Date(endDate) < new Date();
 };
 
-const frenchDate = dte =>
-  dte
-    .split("-")
-    .reverse()
-    .join("/");
-
 // show only 2nd char and spaces
 const obfuscate = string =>
   string
@@ -40,10 +34,10 @@ const extractPublicData = doc => ({
   siret: doc.dossier.etablissement.siret,
   prenom: obfuscate(getPublicFieldValue(doc, "Prénom")),
   nom: obfuscate(getPublicFieldValue(doc, "Nom")),
-  date_de_naissance: frenchDate(getPublicFieldValue(doc, "Date de naissance")),
+  date_de_naissance: getPublicFieldValue(doc, "Date de naissance"),
   has_expired: hasExpired(doc),
-  date_de_debut_apt: frenchDate(getPrivateFieldValue(doc, "Date de début APT")),
-  date_de_fin_apt: frenchDate(getPrivateFieldValue(doc, "Date de fin APT"))
+  date_de_debut_apt: getPrivateFieldValue(doc, "Date de début APT"),
+  date_de_fin_apt: getPrivateFieldValue(doc, "Date de fin APT")
 });
 
 const extractDocs = docs => docs.result.map(extractPublicData);
