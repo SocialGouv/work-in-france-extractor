@@ -7,4 +7,4 @@ const url = `${endPoint}/stats`;
 
 const publicData = fetch(url).then(r => r.json());
 
-publicData.then(console.log);
+publicData.then(data => console.log(JSON.stringify(data, null, 2)));

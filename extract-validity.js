@@ -56,4 +56,4 @@ const publicData = fetch(url, {
   .then(r => r.json())
   .then(extractDocs);
 
-publicData.then(console.log);
+publicData.then(data => console.log(JSON.stringify(data, null, 2)));
