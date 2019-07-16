@@ -1,4 +1,4 @@
-# work-in-france-extractor
+# work-in-france-extractor [![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges)
 
 Extract public data from [ds-collector](https://github.com/SocialGouv/ds-collector)
 
